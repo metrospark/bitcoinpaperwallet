@@ -113,6 +113,13 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'Q';	
 		document.title = 'Dogecoin paper wallet generator. Wow! Many coin. Such shiny.';
 		break;
+	case 'Czarcoin':
+		window.networkVersion = 0x0f;
+		window.privateKeyPrefix = 0x8e;
+		window.WIFPrefix = '6';
+		window.compressedWIFPrefix = 'Q';	
+		document.title = 'Czarcoin paper wallet generator.';
+		break;
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -143,6 +150,9 @@ switch (myDesign) {
 		break;
 	case 'alt-dogecoin':
 		setCryptoCurrency('Dogecoin');
+		break;
+	case 'alt-czarcoin':
+		setCryptoCurrency('Czarcoin');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
@@ -10523,6 +10533,7 @@ Bitcoin.Util = {
                             <option value="default">--- Other Cryptocurrencies ---</option>
                             <option value="alt-litecoin">Litecoin LTC</option>
                             <option value="alt-dogecoin">Dogecoin DOGE</option>
+                            <option value="alt-czarcoin">Czarcoin CZR</option>
                             <option value="counterparty">Counterparty XCP</option>
                             <option value="alt-testnet">"Testnet"</option>
                           </select>
